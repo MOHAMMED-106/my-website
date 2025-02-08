@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #00ff11;
+        font-family: Arial, sans-serif;
+      }
+      .form-container {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #022b17;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .form-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #12785d;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .btn-primary {
+        background-color: #0d130c;
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #79f924;
+      }
+      .form-container label {
+        color: #4CAF50;
+        font-weight: bold;
+      }
+      .form-container input::placeholder {
+        color: #FF6347;
+        font-style: italic;
+      }
+      .cybersecurity-text {
+        font-size: 1rem;
+        color: #07f6a2;
+        background-color: rgba(0, 128, 0, 0.4);
+        padding: 8px;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Style for invalid fields */
+      input:invalid {
+        border: 2px solid red; /* Red border for invalid input */
+      }
+
+      /* Style for valid fields */
+      input:valid {
+        border: 2px solid green; /* Green border for valid input */
+      }
+      
+    </style>
+</head>
+<body>
+  <div class="form-container">
+    <p class="cybersecurity-text">
+      Cybersecurity is the practice of protecting systems, networks, and data from digital attacks, ensuring the safety and privacy of online information.
+    </p>
+
+    <h1 class="form-title">Login</h1>
+    <form action="index.html" method="get">
+      <!-- Name Field with Validation -->
+      <div class="mb-3">
+        <label for="username" class="form-label">Name</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your name" required
+          minlength="5" maxlength="19"
+          pattern="^[A-Za-zأ-ي\s]+$" title="Name must be between 5 and 19 letters, and should not contain numbers. Only letters (A-Z, a-z, أ-ي) and spaces are allowed.">
+      </div>
+
+      <!-- Email Field -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <!-- Password Field with Validation -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required
+          minlength="8" pattern="^[A-Za-z0-9]+$" title="Password must be at least 8 characters long and contain only letters (A-Z, a-z) and numbers (0-9).">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+  </div>
+</body>
+</html>
